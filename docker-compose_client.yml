@@ -1,0 +1,15 @@
+services:
+ cliente:
+   container_name: asir_cliente
+   image: alpine
+   tty: true
+   stdin_open: true
+   networks: 
+    - bind9_subnet
+   dns:
+    - 172.28.5.1 
+
+networks:
+  bind9_subnet:
+   external: true
+ 
